@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    init() {
+        let parser = LogParserXCLog()
+        parser.parseLogs(forProject: "Bee")
+    }
+    
     var body: some View {
         Text("Welcome to Bee!")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
