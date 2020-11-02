@@ -9,13 +9,13 @@ import Foundation
 
 struct BuildSummary: Codable {
     
-    let machineName: String
-    let warningCount: Int
-    let duration: Int
-    let signature: String
-    let startDate: Date
-    let endDate: Date
-    let buildStatus: String
-    let schema: String
+    let machineName: String?
+    let warningCount: Int?
+    let duration: Float
+    let signature: String?
+    let startDate: String?
+    let endDate: String?
+    let buildStatus: String?
+    let schema: String?
     
 }

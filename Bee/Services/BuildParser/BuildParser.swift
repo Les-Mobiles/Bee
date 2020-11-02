@@ -9,13 +9,12 @@ import Foundation
 
 enum LogParserError: Error {
     case parserNotFound
-    case generalError
-    case filePermissionError
+    case errorInterpretingParserData
+    case errorDecodingParserData
 }
 
 
-protocol LogParser {
-    var derivedDataPath: String { get } // Path to derived Data
-    init(withLogPath path: String)
-    func parseLogs(forProject project: String) -> Result<[BuildSummary], LogParserError>
+protocol LogParser {    
+    func parseLogs(forProject project: String,
+                   withData derivedData: String) -> Result<BuildSummary?, LogParserError>
 }

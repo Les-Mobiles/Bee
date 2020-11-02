@@ -1,6 +1,0 @@
-framework module Pods_Bee_BeeUITests {
-  umbrella header "Pods-Bee-BeeUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module PermissionsKit {
-  umbrella header "PermissionsKit-macOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

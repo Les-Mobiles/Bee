@@ -10,9 +10,6 @@ import PermissionsKit
 
 struct LogParserXCLog {
     
-    // MARK: LogParser Protocol
-    var derivedDataPath: String = "/Users/afterxleep/Library/Developer/Xcode/DerivedData"
-    
     // MARK: Static vars
     private let shell = "/bin/bash"
     private let parserExecutable = "xclogparser"
@@ -37,23 +34,27 @@ struct LogParserXCLog {
 
 // MARK: LogParser Protocol
 extension LogParserXCLog: LogParser {
-
-    init(withLogPath path: String) {
-        self.derivedDataPath = path
-    }
     
-    func parseLogs(forProject project: String) -> Result<[BuildSummary], LogParserError> {
+    func parseLogs(forProject project: String,
+                   withData derivedData: String) -> Result<BuildSummary?, LogParserError> {
                 
         guard let parser = Bundle.main.path(forResource: parserExecutable,
                                             ofType: nil) else { return .failure(.parserNotFound) }
+                    
+        // TODO: Parse potential xclogparser errors here -- This assumes parser worked every time
+        let result = shell(String(format: simpleReportCommand, parser, project, derivedData))
         
-        // Make sure we have permissions to full disk access
-        guard PermissionsKit.authorizationStatus(for: .fullDiskAccess) == .authorized else { return .failure(.filePermissionError)}
-                
-        let result = shell(String(format: simpleReportCommand, parser, project, derivedDataPath))
+        guard let jsonData = result.data(using: .utf8) else { return .failure(.errorInterpretingParserData) }
         
-        print(result)
-        return .success([])
+        let decoder = JSONDecoder()
+        do {
+            let report = try decoder.decode(BuildSummary.self, from: jsonData)
+            return .success(report)
+        } catch {
+           print(error)
+        }
+            
+        return .failure(.errorDecodingParserData)
     }
 
 }
