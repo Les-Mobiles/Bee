@@ -20,7 +20,7 @@ struct LogParserXCLog {
     private let unrecognizedArgs = "Unrecognized Arguments"
     private let projectNotFound = "There is no directory for the project"
     
-    func shell(_ command: String) -> Result<Data, ShellCmdError> {
+    private func shell(_ command: String) -> Result<Data, ShellCmdError> {
         let task = Process()
         let outputPipe = Pipe()
         let errorPipe = Pipe()
@@ -43,7 +43,7 @@ struct LogParserXCLog {
         return .success(parsedData)
     }
     
-    func handleXCLogParserError(_ data: Data) -> LogParserError {
+    private func handleXCLogParserError(_ data: Data) -> LogParserError {
         let e = String(data: data, encoding: .utf8)
         if((e?.contains(projectNotFound)) != nil) {
             return .projectNotFound
@@ -51,7 +51,7 @@ struct LogParserXCLog {
         return .generalError
     }
     
-    func handleShellError(_ error: ShellCmdError) -> LogParserError {
+    private func handleShellError(_ error: ShellCmdError) -> LogParserError {
         switch error {
             case .invalidArguments:
                 return .invalidFolderSelected

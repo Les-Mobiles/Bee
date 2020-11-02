@@ -16,7 +16,8 @@
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
-		D69D6E3D254F6AFA00F1FEB3 /* BuildParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E3C254F6AFA00F1FEB3 /* BuildParserTests.swift */; };
+		D62DB181254F9DE50008870D /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DB180254F9DE50008870D /* BuildParserXCLogTests.swift */; };
+		D62DB18A254F9F710008870D /* ParserTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DB189254F9F710008870D /* ParserTestView.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +55,10 @@
 		D613B407254CBAC200734B49 /* BuildParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParser.swift; sourceTree = "<group>"; };
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
 		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; usesTabs = 0; };
-		D69D6E3C254F6AFA00F1FEB3 /* BuildParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserTests.swift; sourceTree = "<group>"; };
+		D62DB17F254F9DE50008870D /* BeeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D62DB180254F9DE50008870D /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
+		D62DB189254F9F710008870D /* ParserTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTestView.swift; sourceTree = "<group>"; };
+		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,10 +115,12 @@
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
 				D613B3D7254CBA7F00734B49 /* ContentView.swift */,
+				D62DB189254F9F710008870D /* ParserTestView.swift */,
 				D613B3D9254CBA8600734B49 /* Assets.xcassets */,
 				D613B3DE254CBA8600734B49 /* Main.storyboard */,
 				D613B3E1254CBA8600734B49 /* Info.plist */,
 				D613B3E2254CBA8600734B49 /* Bee.entitlements */,
+				D62DB18E254F9FFC0008870D /* BeeTests.entitlements */,
 				D613B3DB254CBA8600734B49 /* Preview Content */,
 			);
 			path = Bee;
@@ -132,7 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				D613B3ED254CBA8600734B49 /* Info.plist */,
-				D69D6E3C254F6AFA00F1FEB3 /* BuildParserTests.swift */,
+				D62DB180254F9DE50008870D /* BuildParserXCLogTests.swift */,
+				D62DB17F254F9DE50008870D /* BeeTests-Bridging-Header.h */,
 			);
 			path = BeeTests;
 			sourceTree = "<group>";
@@ -257,6 +264,7 @@
 					};
 					D613B3E6254CBA8600734B49 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = D613B3D1254CBA7F00734B49;
 					};
 					D613B3F1254CBA8700734B49 = {
@@ -321,6 +329,7 @@
 				D613B408254CBAC200734B49 /* BuildParser.swift in Sources */,
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
+				D62DB18A254F9F710008870D /* ParserTestView.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
 				D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */,
 			);
@@ -330,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69D6E3D254F6AFA00F1FEB3 /* BuildParserTests.swift in Sources */,
+				D62DB181254F9DE50008870D /* BuildParserXCLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +546,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -549,6 +560,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeTests/BeeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee.app/Contents/MacOS/Bee";
 			};
@@ -559,6 +572,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -571,6 +586,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeTests/BeeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee.app/Contents/MacOS/Bee";
 			};
@@ -580,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -600,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
