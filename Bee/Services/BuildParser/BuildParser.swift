@@ -9,8 +9,10 @@ import Foundation
 
 enum LogParserError: Error {
     case parserNotFound
-    case errorInterpretingParserData
     case errorDecodingParserData
+    case projectNotFound
+    case invalidFolderSelected
+    case generalError
 }
 
 

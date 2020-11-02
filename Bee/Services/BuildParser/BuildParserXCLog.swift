@@ -6,7 +6,10 @@
 //
 
 import Foundation
-import PermissionsKit
+
+enum ShellCmdError: Error {
+    case invalidArguments
+}
 
 struct LogParserXCLog {
     
@@ -14,20 +17,45 @@ struct LogParserXCLog {
     private let shell = "/bin/bash"
     private let parserExecutable = "xclogparser"
     private let simpleReportCommand = "%@ parse --project %@ --reporter summaryJson --derived_data %@"
+    private let unrecognizedArgs = "Unrecognized Arguments"
+    private let projectNotFound = "There is no directory for the project"
     
-    func shell(_ command: String) -> String {
+    func shell(_ command: String) -> Result<Data, ShellCmdError> {
         let task = Process()
-        let pipe = Pipe()
+        let outputPipe = Pipe()
+        let errorPipe = Pipe()
 
-        task.standardOutput = pipe
+        task.standardOutput = outputPipe
+        task.standardError = errorPipe
         task.arguments = ["-c", command]
         task.launchPath = shell
         task.launch()
-
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)!
-
-        return output
+        
+        let parsedData = outputPipe.fileHandleForReading.readDataToEndOfFile()
+        let error = errorPipe.fileHandleForReading.readDataToEndOfFile()
+        
+        if(!error.isEmpty) {
+            let e = String(data: error, encoding: .utf8)
+            if((e?.contains(unrecognizedArgs)) != nil) {
+                return .failure(.invalidArguments)
+            }
+        }
+        return .success(parsedData)
+    }
+    
+    func handleXCLogParserError(_ data: Data) -> LogParserError {
+        let e = String(data: data, encoding: .utf8)
+        if((e?.contains(projectNotFound)) != nil) {
+            return .projectNotFound
+        }
+        return .generalError
+    }
+    
+    func handleShellError(_ error: ShellCmdError) -> LogParserError {
+        switch error {
+            case .invalidArguments:
+                return .invalidFolderSelected
+            }
     }
 
 }
@@ -40,21 +68,21 @@ extension LogParserXCLog: LogParser {
                 
         guard let parser = Bundle.main.path(forResource: parserExecutable,
                                             ofType: nil) else { return .failure(.parserNotFound) }
-                    
-        // TODO: Parse potential xclogparser errors here -- This assumes parser worked every time
-        let result = shell(String(format: simpleReportCommand, parser, project, derivedData))
+                            
+        let parserResult = shell(String(format: simpleReportCommand, parser, project, derivedData))
         
-        guard let jsonData = result.data(using: .utf8) else { return .failure(.errorInterpretingParserData) }
-        
-        let decoder = JSONDecoder()
-        do {
-            let report = try decoder.decode(BuildSummary.self, from: jsonData)
-            return .success(report)
-        } catch {
-           print(error)
+        switch parserResult {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let report = try decoder.decode(BuildSummary.self, from: data)
+                    return .success(report)
+                } catch {
+                    return .failure(handleXCLogParserError(data))
+                }
+                
+            case .failure(let error):
+                return .failure(handleShellError(error))
         }
-            
-        return .failure(.errorDecodingParserData)
     }
-
 }
