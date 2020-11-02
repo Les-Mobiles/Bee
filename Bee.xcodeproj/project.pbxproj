@@ -17,6 +17,7 @@
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
+		D995DE69254FDF1A00AE93E7 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		D613B3D2254CBA7F00734B49 /* Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bee.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D613B3D5254CBA7F00734B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D613B3D5254CBA7F00734B49 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D613B3D7254CBA7F00734B49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D613B3D9254CBA8600734B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		D613B407254CBAC200734B49 /* BuildParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParser.swift; sourceTree = "<group>"; };
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
 		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; };
+		D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		D613B412254CBB9800734B49 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D995DE67254FDE2100AE93E7 /* MenuBar */,
 				D613B3D5254CBA7F00734B49 /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -174,6 +177,14 @@
 				D613B417254CBBF800734B49 /* BuildParserXCLog.swift */,
 			);
 			path = BuildParser;
+			sourceTree = "<group>";
+		};
+		D995DE67254FDE2100AE93E7 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */,
+			);
+			path = MenuBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
+				D995DE69254FDF1A00AE93E7 /* MenuBarHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
