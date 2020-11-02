@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Bee
+
+  Created by Santiago Avila Arroyave on 11/2/20.
+  
+*/
+
+"StatusItem.Menu.Preferences" = "Preferences...";
+"StatusItem.Menu.Quit" = "Quit";

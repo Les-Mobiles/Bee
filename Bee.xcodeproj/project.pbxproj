@@ -12,12 +12,13 @@
 		D613B3DA254CBA8600734B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3D9254CBA8600734B49 /* Assets.xcassets */; };
 		D613B3DD254CBA8600734B49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */; };
 		D613B3E0254CBA8600734B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DE254CBA8600734B49 /* Main.storyboard */; };
-		D613B3EC254CBA8600734B49 /* BeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3EB254CBA8600734B49 /* BeeTests.swift */; };
-		D613B3F7254CBA8700734B49 /* BeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3F6254CBA8700734B49 /* BeeUITests.swift */; };
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
 		D995DE69254FDF1A00AE93E7 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */; };
+		D995DE98255060B000AE93E7 /* MenuBarHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995DE97255060B000AE93E7 /* MenuBarHandlerTests.swift */; };
+		D995DEA42550612B00AE93E7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D995DEA62550612B00AE93E7 /* Localizable.strings */; };
+		D995DEAD255061A400AE93E7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995DEAC255061A400AE93E7 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,15 +48,16 @@
 		D613B3E1254CBA8600734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B3E2254CBA8600734B49 /* Bee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bee.entitlements; sourceTree = "<group>"; };
 		D613B3E7254CBA8600734B49 /* BeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D613B3EB254CBA8600734B49 /* BeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeTests.swift; sourceTree = "<group>"; };
 		D613B3ED254CBA8600734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B3F2254CBA8700734B49 /* BeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D613B3F6254CBA8700734B49 /* BeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeUITests.swift; sourceTree = "<group>"; };
 		D613B3F8254CBA8700734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B407254CBAC200734B49 /* BuildParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParser.swift; sourceTree = "<group>"; };
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
 		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; };
 		D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D995DE97255060B000AE93E7 /* MenuBarHandlerTests.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandlerTests.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D995DEA52550612B00AE93E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D995DEAC255061A400AE93E7 /* String+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +109,10 @@
 		D613B3D4254CBA7F00734B49 /* Bee */ = {
 			isa = PBXGroup;
 			children = (
+				D995DEAB2550619300AE93E7 /* Extensions */,
+				D995DE7F2550597300AE93E7 /* Supporting Files */,
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
-				D613B3D7254CBA7F00734B49 /* ContentView.swift */,
-				D613B3D9254CBA8600734B49 /* Assets.xcassets */,
-				D613B3DE254CBA8600734B49 /* Main.storyboard */,
-				D613B3E1254CBA8600734B49 /* Info.plist */,
-				D613B3E2254CBA8600734B49 /* Bee.entitlements */,
 				D613B3DB254CBA8600734B49 /* Preview Content */,
 			);
 			path = Bee;
@@ -130,7 +129,7 @@
 		D613B3EA254CBA8600734B49 /* BeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D613B3EB254CBA8600734B49 /* BeeTests.swift */,
+				D995DE952550607400AE93E7 /* Application */,
 				D613B3ED254CBA8600734B49 /* Info.plist */,
 			);
 			path = BeeTests;
@@ -139,7 +138,6 @@
 		D613B3F5254CBA8700734B49 /* BeeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D613B3F6254CBA8700734B49 /* BeeUITests.swift */,
 				D613B3F8254CBA8700734B49 /* Info.plist */,
 			);
 			path = BeeUITests;
@@ -156,6 +154,9 @@
 		D613B412254CBB9800734B49 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D613B3D7254CBA7F00734B49 /* ContentView.swift */,
+				D613B3DE254CBA8600734B49 /* Main.storyboard */,
+				D995DE7E2550596C00AE93E7 /* Assets */,
 				D995DE67254FDE2100AE93E7 /* MenuBar */,
 				D613B3D5254CBA7F00734B49 /* AppDelegate.swift */,
 			);
@@ -185,6 +186,48 @@
 				D995DE68254FDF1A00AE93E7 /* MenuBarHandler.swift */,
 			);
 			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		D995DE7E2550596C00AE93E7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D613B3D9254CBA8600734B49 /* Assets.xcassets */,
+				D995DEA62550612B00AE93E7 /* Localizable.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D995DE7F2550597300AE93E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D613B3E2254CBA8600734B49 /* Bee.entitlements */,
+				D613B3E1254CBA8600734B49 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D995DE952550607400AE93E7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D995DE962550607D00AE93E7 /* MenuBar */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D995DE962550607D00AE93E7 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				D995DE97255060B000AE93E7 /* MenuBarHandlerTests.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		D995DEAB2550619300AE93E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D995DEAC255061A400AE93E7 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +293,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					D613B3D1254CBA7F00734B49 = {
 						CreatedOnToolsVersion = 12.0;
@@ -290,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D995DEA42550612B00AE93E7 /* Localizable.strings in Resources */,
 				D613B3E0254CBA8600734B49 /* Main.storyboard in Resources */,
 				D613B40D254CBB6200734B49 /* xclogparser in Resources */,
 				D613B3DD254CBA8600734B49 /* Preview Assets.xcassets in Resources */,
@@ -322,6 +366,7 @@
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
+				D995DEAD255061A400AE93E7 /* String+Extensions.swift in Sources */,
 				D995DE69254FDF1A00AE93E7 /* MenuBarHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D613B3EC254CBA8600734B49 /* BeeTests.swift in Sources */,
+				D995DE98255060B000AE93E7 /* MenuBarHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D613B3F7254CBA8700734B49 /* BeeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +408,14 @@
 				D613B3DF254CBA8600734B49 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D995DEA62550612B00AE93E7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D995DEA52550612B00AE93E7 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -489,20 +541,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Bee/Bee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bee/Supporting Files/Bee.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bee/Info.plist;
+				INFOPLIST_FILE = "Bee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -513,20 +566,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Bee/Bee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bee/Supporting Files/Bee.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Bee/Info.plist;
+				INFOPLIST_FILE = "Bee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -539,7 +593,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,7 +615,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,7 +636,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,7 +656,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

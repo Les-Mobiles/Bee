@@ -1,5 +1,5 @@
 //
-//  MenuBarConfigurator.swift
+//  MenuBarHandler.swift
 //  Bee
 //
 //  Created by Santiago Avila Arroyave on 11/1/20.
@@ -26,9 +26,9 @@ private extension MenuBarHandler {
         var title: String {
             switch self {
                 case .preferences:
-                    return "Preferences..."
+                    return "StatusItem.Menu.Preferences".localized
                 case .quit:
-                    return "Quit"
+                    return "StatusItem.Menu.Quit".localized
             }
         }
         
