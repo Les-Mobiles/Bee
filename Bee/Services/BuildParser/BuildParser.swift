@@ -15,6 +15,23 @@ enum LogParserError: Error {
     case generalError
 }
 
+extension LogParserError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .parserNotFound:
+            return NSLocalizedString("The parser executable was not found in the path", comment: "")
+        case .errorDecodingParserData:
+            return NSLocalizedString("An error ocurred while decoding parser output", comment: "")
+        case .projectNotFound:
+            return NSLocalizedString("The Xcode project was not found in the provided folder", comment: "")
+        case .invalidFolderSelected:
+            return NSLocalizedString("The LogParsed could not access the provided folder", comment: "")
+        case .generalError:
+            return NSLocalizedString("An unexpected error ocurred", comment: "")
+        }
+    }
+}
+
 
 protocol LogParser {    
     func parseLogs(forProject project: String,

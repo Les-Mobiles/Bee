@@ -13,13 +13,14 @@ enum ShellCmdError: Error {
 
 struct LogParserXCLog {
     
-    // MARK: Static vars
-    private let shell = "/bin/bash"
-    private let parserExecutable = "xclogparser"
-    private let simpleReportCommand = "%@ parse --project %@ --reporter summaryJson --derived_data %@"
-    private let unrecognizedArgs = "Unrecognized Arguments"
-    private let projectNotFound = "There is no directory for the project"
-    
+    private enum Constants: String {
+        case shell = "/bin/bash"
+        case parserExecutable = "xclogparser"
+        case simpleReportCommand = "%@ parse --project %@ --reporter summaryJson --derived_data %@"
+        case unrecognizedArgs = "Unrecognized Arguments"
+        case projectNotFound = "There is no directory for the project"
+    }
+        
     private func shell(_ command: String) -> Result<Data, ShellCmdError> {
         let task = Process()
         let outputPipe = Pipe()
@@ -28,24 +29,24 @@ struct LogParserXCLog {
         task.standardOutput = outputPipe
         task.standardError = errorPipe
         task.arguments = ["-c", command]
-        task.launchPath = shell
+        task.launchPath = Constants.shell.rawValue
         task.launch()
         
         let parsedData = outputPipe.fileHandleForReading.readDataToEndOfFile()
-        let error = errorPipe.fileHandleForReading.readDataToEndOfFile()
+        let parseError = errorPipe.fileHandleForReading.readDataToEndOfFile()
         
-        if(!error.isEmpty) {
-            let e = String(data: error, encoding: .utf8)
-            if((e?.contains(unrecognizedArgs)) != nil) {
+        if !parseError.isEmpty {
+            let e = String(data: parseError, encoding: .utf8)
+            if e?.contains(Constants.unrecognizedArgs.rawValue) != nil {
                 return .failure(.invalidArguments)
             }
         }
         return .success(parsedData)
     }
     
-    private func handleXCLogParserError(_ data: Data) -> LogParserError {
-        let e = String(data: data, encoding: .utf8)
-        if((e?.contains(projectNotFound)) != nil) {
+    private func handleXCLogParserError(_ parseError: Data) -> LogParserError {
+        let e = String(data: parseError, encoding: .utf8)
+        if e?.contains(Constants.projectNotFound.rawValue) != nil {
             return .projectNotFound
         }
         return .generalError
@@ -66,10 +67,10 @@ extension LogParserXCLog: LogParser {
     func parseLogs(forProject project: String,
                    withData derivedData: String) -> Result<BuildSummary?, LogParserError> {
                 
-        guard let parser = Bundle.main.path(forResource: parserExecutable,
+        guard let parser = Bundle.main.path(forResource: Constants.parserExecutable.rawValue,
                                             ofType: nil) else { return .failure(.parserNotFound) }
                             
-        let parserResult = shell(String(format: simpleReportCommand, parser, project, derivedData))
+        let parserResult = shell(String(format: Constants.simpleReportCommand.rawValue, parser, project, derivedData))
         
         switch parserResult {
             case .success(let data):
