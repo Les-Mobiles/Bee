@@ -12,11 +12,12 @@
 		D613B3DA254CBA8600734B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3D9254CBA8600734B49 /* Assets.xcassets */; };
 		D613B3DD254CBA8600734B49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */; };
 		D613B3E0254CBA8600734B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DE254CBA8600734B49 /* Main.storyboard */; };
-		D613B3EC254CBA8600734B49 /* BeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3EB254CBA8600734B49 /* BeeTests.swift */; };
 		D613B3F7254CBA8700734B49 /* BeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3F6254CBA8700734B49 /* BeeUITests.swift */; };
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
+		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
+		D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +47,16 @@
 		D613B3E1254CBA8600734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B3E2254CBA8600734B49 /* Bee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bee.entitlements; sourceTree = "<group>"; };
 		D613B3E7254CBA8600734B49 /* BeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D613B3EB254CBA8600734B49 /* BeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeTests.swift; sourceTree = "<group>"; };
 		D613B3ED254CBA8600734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B3F2254CBA8700734B49 /* BeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D613B3F6254CBA8700734B49 /* BeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeUITests.swift; sourceTree = "<group>"; };
 		D613B3F8254CBA8700734B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D613B407254CBAC200734B49 /* BuildParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParser.swift; sourceTree = "<group>"; };
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
-		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; };
+		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; usesTabs = 0; };
+		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
+		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
+		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 		D613B3D4254CBA7F00734B49 /* Bee */ = {
 			isa = PBXGroup;
 			children = (
+				D69D6E4F254F716500F1FEB3 /* Models */,
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
 				D613B3D7254CBA7F00734B49 /* ContentView.swift */,
@@ -112,6 +116,7 @@
 				D613B3DE254CBA8600734B49 /* Main.storyboard */,
 				D613B3E1254CBA8600734B49 /* Info.plist */,
 				D613B3E2254CBA8600734B49 /* Bee.entitlements */,
+				D62DB18E254F9FFC0008870D /* BeeTests.entitlements */,
 				D613B3DB254CBA8600734B49 /* Preview Content */,
 			);
 			path = Bee;
@@ -128,7 +133,7 @@
 		D613B3EA254CBA8600734B49 /* BeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D613B3EB254CBA8600734B49 /* BeeTests.swift */,
+				D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */,
 				D613B3ED254CBA8600734B49 /* Info.plist */,
 			);
 			path = BeeTests;
@@ -174,6 +179,14 @@
 				D613B417254CBBF800734B49 /* BuildParserXCLog.swift */,
 			);
 			path = BuildParser;
+			sourceTree = "<group>";
+		};
+		D69D6E4F254F716500F1FEB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D69D6E50254F717200F1FEB3 /* BuildSummary.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 					};
 					D613B3E6254CBA8600734B49 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = D613B3D1254CBA7F00734B49;
 					};
 					D613B3F1254CBA8700734B49 = {
@@ -311,6 +325,7 @@
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
+				D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D613B3EC254CBA8600734B49 /* BeeTests.swift in Sources */,
+				D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +540,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -537,6 +554,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee.app/Contents/MacOS/Bee";
 			};
@@ -547,6 +566,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -559,6 +580,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bee.app/Contents/MacOS/Bee";
 			};
@@ -568,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
@@ -588,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JM9222EF99;
