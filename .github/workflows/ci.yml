@@ -25,15 +25,21 @@ jobs:
         run: |
           bundle config path vendor/bundle
           bundle install --without=documentation --jobs 4 --retry 3
-      
+
       - name: Unit Tests
-        run: bundle exec fastlane unit_tests
+        run: xcodebuild clean test \
+              -scheme 'Bee' \
+              -destination 'platform=macOS' \
+              -only-testing 'BeeTests'
         env:
           destination: $
           DEVELOPER_DIR: '/Applications/Xcode_12.app/Contents/Developer'
       
       - name: UI Tests
-        run: bundle exec fastlane ui_tests
+        run: xcodebuild clean test \
+              -scheme 'Bee' \
+              -destination 'platform=macOS' \
+              -only-testing 'BeeUITests'
         env:
           destination: $
           DEVELOPER_DIR: '/Applications/Xcode_12.app/Contents/Developer'

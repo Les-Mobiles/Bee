@@ -9,12 +9,31 @@ import Foundation
 
 enum LogParserError: Error {
     case parserNotFound
+    case errorDecodingParserData
+    case projectNotFound
+    case invalidFolderSelected
     case generalError
 }
 
+extension LogParserError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .parserNotFound:
+            return NSLocalizedString("The parser executable was not found in the path", comment: "")
+        case .errorDecodingParserData:
+            return NSLocalizedString("An error ocurred while decoding parser output", comment: "")
+        case .projectNotFound:
+            return NSLocalizedString("The Xcode project was not found in the provided folder", comment: "")
+        case .invalidFolderSelected:
+            return NSLocalizedString("The LogParsed could not access the provided folder", comment: "")
+        case .generalError:
+            return NSLocalizedString("An unexpected error ocurred", comment: "")
+        }
+    }
+}
 
-protocol LogParser {
-    var logPath: String { get } // Path to derived Data
-    init(withLogPath path: String)
-    func parseLogs() -> Result<Data, LogParserError>
+
+protocol LogParser {    
+    func parseLogs(forProject project: String,
+                   withData derivedData: String) -> Result<BuildSummary?, LogParserError>
 }

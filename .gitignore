@@ -27,7 +27,3 @@ xcuserdata
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
-
-# Fastlane
-fastlane/report.xml
-fastlane/test_output
