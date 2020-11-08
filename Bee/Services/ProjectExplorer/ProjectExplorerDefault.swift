@@ -31,7 +31,7 @@ struct ProjectExplorerDefault: ProjectExplorer {
             guard let index = $0.firstIndex(of: Character(StringConstants.projectDelimiter.rawValue)) else { return $0 }
             return String($0.prefix(upTo: index))
         }
-        return .success(projectNames)
+        return .success(Array(Set(projectNames)).sorted())
     }
     
 }
