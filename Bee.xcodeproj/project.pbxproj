@@ -16,6 +16,11 @@
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
+		D64DDAF825588963003A7DDE /* ProjectExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDAF725588963003A7DDE /* ProjectExplorer.swift */; };
+		D64DDB0025588976003A7DDE /* ProjectExplorerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDAFF25588976003A7DDE /* ProjectExplorerDefault.swift */; };
+		D64DDB062558899C003A7DDE /* ProjectExplorerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */; };
+		D64DDB0E255889BD003A7DDE /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB0D255889BD003A7DDE /* FileManagerMock.swift */; };
+		D64DDB1C25588A42003A7DDE /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB1B25588A42003A7DDE /* TestUtils.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
 		D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */; };
 		D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDB4255849BF008600D2 /* MenuBarHandler.swift */; };
@@ -60,6 +65,11 @@
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
 		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
+		D64DDAF725588963003A7DDE /* ProjectExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorer.swift; sourceTree = "<group>"; };
+		D64DDAFF25588976003A7DDE /* ProjectExplorerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefault.swift; sourceTree = "<group>"; };
+		D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefault.swift; sourceTree = "<group>"; };
+		D64DDB0D255889BD003A7DDE /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		D64DDB1B25588A42003A7DDE /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
 		D972FDB4255849BF008600D2 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -181,6 +191,7 @@
 		D613B414254CBBBE00734B49 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D64DDAF625588953003A7DDE /* ProjectExplorer */,
 				D613B415254CBBC500734B49 /* BuildParser */,
 			);
 			path = Services;
@@ -193,6 +204,23 @@
 				D613B417254CBBF800734B49 /* BuildParserXCLog.swift */,
 			);
 			path = BuildParser;
+			sourceTree = "<group>";
+		};
+		D64DDAF625588953003A7DDE /* ProjectExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				D64DDAF725588963003A7DDE /* ProjectExplorer.swift */,
+				D64DDAFF25588976003A7DDE /* ProjectExplorerDefault.swift */,
+			);
+			path = ProjectExplorer;
+			sourceTree = "<group>";
+		};
+		D64DDB0425588985003A7DDE /* ProjectExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */,
+			);
+			path = ProjectExplorer;
 			sourceTree = "<group>";
 		};
 		D69D6E4F254F716500F1FEB3 /* Models */ = {
@@ -247,6 +275,7 @@
 		D972FDDC25584C5B008600D2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D64DDB0425588985003A7DDE /* ProjectExplorer */,
 				D972FDDD25584C65008600D2 /* BuildParser */,
 			);
 			path = Services;
@@ -264,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */,
+				D64DDB0D255889BD003A7DDE /* FileManagerMock.swift */,
+				D64DDB1B25588A42003A7DDE /* TestUtils.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -401,6 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64DDB0025588976003A7DDE /* ProjectExplorerDefault.swift in Sources */,
+				D64DDAF825588963003A7DDE /* ProjectExplorer.swift in Sources */,
 				D613B408254CBAC200734B49 /* BuildParser.swift in Sources */,
 				D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */,
 				D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */,
@@ -415,9 +448,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64DDB062558899C003A7DDE /* ProjectExplorerDefault.swift in Sources */,
+				D64DDB1C25588A42003A7DDE /* TestUtils.swift in Sources */,
 				D972FDEC25584ECE008600D2 /* AppDelegateMock.swift in Sources */,
 				D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */,
 				D972FDD425584C20008600D2 /* MenuBarHandlerTests.swift in Sources */,
+				D64DDB0E255889BD003A7DDE /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bee/Info.plist;
@@ -597,7 +633,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -612,7 +648,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bee/Info.plist;
@@ -621,7 +657,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -636,7 +672,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -662,7 +698,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,7 +721,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -706,7 +742,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = SFVRA5WZ6U;
+				DEVELOPMENT_TEAM = JM9222EF99;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
