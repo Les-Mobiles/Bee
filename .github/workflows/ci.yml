@@ -13,18 +13,6 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Cache Gems
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gem-
-
-      - name: Bundle Install
-        run: |
-          bundle config path vendor/bundle
-          bundle install --without=documentation --jobs 4 --retry 3
 
       - name: Unit Tests
         run: xcodebuild clean test -scheme 'Bee' -destination 'platform=macOS' -only-testing 'BeeTests'
