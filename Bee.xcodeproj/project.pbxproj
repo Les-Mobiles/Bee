@@ -72,7 +72,7 @@
 		D64DDB1B25588A42003A7DDE /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
-		D6EEF1FC2558B5B300ADA862 /* EasyNetowrking */ = {isa = PBXFileReference; lastKnownFileType = text; name = EasyNetowrking; path = Packages/EasyNetowrking; sourceTree = SOURCE_ROOT; };
+		D6EEF2082558B72500ADA862 /* EasyNetowrking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EasyNetowrking; sourceTree = "<group>"; };
 		D972FDB4255849BF008600D2 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D972FDC625584B60008600D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D972FDCA25584B8F008600D2 /* String+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; tabWidth = 4; };
@@ -109,10 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				D613B3D4254CBA7F00734B49 /* Bee */,
+				D6EEF2002558B6B500ADA862 /* DevPackages */,
 				D613B411254CBB6A00734B49 /* Utils */,
 				D613B3EA254CBA8600734B49 /* BeeTests */,
 				D613B3F5254CBA8700734B49 /* BeeUITests */,
-				D6EEF1FB2558B58200ADA862 /* DevPackages */,
 				D613B3D3254CBA7F00734B49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -233,10 +233,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D6EEF1FB2558B58200ADA862 /* DevPackages */ = {
+		D6EEF2002558B6B500ADA862 /* DevPackages */ = {
 			isa = PBXGroup;
 			children = (
-				D6EEF1FC2558B5B300ADA862 /* EasyNetowrking */,
+				D6EEF2082558B72500ADA862 /* EasyNetowrking */,
 			);
 			path = DevPackages;
 			sourceTree = "<group>";
