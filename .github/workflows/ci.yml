@@ -27,19 +27,13 @@ jobs:
           bundle install --without=documentation --jobs 4 --retry 3
 
       - name: Unit Tests
-        run: xcodebuild clean test \
-              -scheme 'Bee' \
-              -destination 'platform=macOS' \
-              -only-testing 'BeeTests'
+        run: xcodebuild clean test -scheme 'Bee' -destination 'platform=macOS' -only-testing 'BeeTests'
         env:
           destination: $
           DEVELOPER_DIR: '/Applications/Xcode_12.app/Contents/Developer'
       
       - name: UI Tests
-        run: xcodebuild clean test \
-              -scheme 'Bee' \
-              -destination 'platform=macOS' \
-              -only-testing 'BeeUITests'
+        run: xcodebuild clean test -scheme 'Bee' -destination 'platform=macOS' -only-testing 'BeeUITests'
         env:
           destination: $
           DEVELOPER_DIR: '/Applications/Xcode_12.app/Contents/Developer'
