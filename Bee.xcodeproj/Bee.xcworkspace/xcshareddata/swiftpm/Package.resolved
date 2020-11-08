@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "EasyNetowrking",
+        "repositoryURL": "https://github.com/Les-Mobiles/EasyNetworking",
+        "state": {
+          "branch": null,
+          "revision": "7041a2c4ac6cb65eb727f876c2ef0e6ba9e49149",
+          "version": "0.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
