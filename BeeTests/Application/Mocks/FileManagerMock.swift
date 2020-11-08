@@ -17,7 +17,7 @@ class FileManagerMock: FileManager {
                             "OtherStuff-fuzayqmwfuxuxhglsddisprjqkqa"]
     
     override func contentsOfDirectory(atPath: String) throws -> [String] {
-        return folderListArray
+        folderListArray
     }
 
 }

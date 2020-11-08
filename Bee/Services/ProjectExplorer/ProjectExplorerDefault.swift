@@ -15,7 +15,7 @@ struct ProjectExplorerDefault: ProjectExplorer {
         case projectDelimiter = "-"
     }
     
-    init(fileManager: FileManager = FileManager.default) {
+    init(fileManager: FileManager = .default) {
         self.fileManager = fileManager
     }
     

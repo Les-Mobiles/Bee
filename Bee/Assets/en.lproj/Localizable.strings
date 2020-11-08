@@ -8,3 +8,17 @@
 
 "StatusItem.Menu.Preferences" = "Preferences...";
 "StatusItem.Menu.Quit" = "Quit";
+
+// General Errors
+"Error.Unknown" = "An unknown error has ocurred";
+
+// Project Explorer
+"Error.ProjectsNotFound" = "There are no Xcode projects in the provided path";
+
+// BuildParser
+"Error.ParserExecutableNotFound" = "The parser executable was not found in the path";
+"Error.DecodingOutput" = "An error ocurred while decoding parser output";
+"Error.XCodeProjectNotFound" = "The Xcode project was not found in the provided folder";
+"Error.LogParserHasNoAccess" = "The LogParsed could not access the provided folder";
+
+

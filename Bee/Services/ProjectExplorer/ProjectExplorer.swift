@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProjectExplorerError: Error {
+enum ProjectExplorerError {
     case projectsNotFoundInPath
     case generalError
 }
@@ -16,9 +16,9 @@ extension ProjectExplorerError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .projectsNotFoundInPath:
-            return NSLocalizedString("There are no Xcode projects in the provided path", comment: "")
+            return "Error.ProjectsNotFound".localized
         case .generalError:
-            return NSLocalizedString("An unknown error has ocurred", comment: "")
+            return "Error.Unknown".localized
         }
     }
 }

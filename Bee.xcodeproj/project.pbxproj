@@ -18,7 +18,7 @@
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
 		D64DDAF825588963003A7DDE /* ProjectExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDAF725588963003A7DDE /* ProjectExplorer.swift */; };
 		D64DDB0025588976003A7DDE /* ProjectExplorerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDAFF25588976003A7DDE /* ProjectExplorerDefault.swift */; };
-		D64DDB062558899C003A7DDE /* ProjectExplorerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */; };
+		D64DDB062558899C003A7DDE /* ProjectExplorerDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB052558899C003A7DDE /* ProjectExplorerDefaultTests.swift */; };
 		D64DDB0E255889BD003A7DDE /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB0D255889BD003A7DDE /* FileManagerMock.swift */; };
 		D64DDB1C25588A42003A7DDE /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB1B25588A42003A7DDE /* TestUtils.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
@@ -67,7 +67,7 @@
 		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
 		D64DDAF725588963003A7DDE /* ProjectExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorer.swift; sourceTree = "<group>"; };
 		D64DDAFF25588976003A7DDE /* ProjectExplorerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefault.swift; sourceTree = "<group>"; };
-		D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefault.swift; sourceTree = "<group>"; };
+		D64DDB052558899C003A7DDE /* ProjectExplorerDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefaultTests.swift; sourceTree = "<group>"; };
 		D64DDB0D255889BD003A7DDE /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 		D64DDB1B25588A42003A7DDE /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		D64DDB0425588985003A7DDE /* ProjectExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				D64DDB052558899C003A7DDE /* ProjectExplorerDefault.swift */,
+				D64DDB052558899C003A7DDE /* ProjectExplorerDefaultTests.swift */,
 			);
 			path = ProjectExplorer;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D64DDB062558899C003A7DDE /* ProjectExplorerDefault.swift in Sources */,
+				D64DDB062558899C003A7DDE /* ProjectExplorerDefaultTests.swift in Sources */,
 				D64DDB1C25588A42003A7DDE /* TestUtils.swift in Sources */,
 				D972FDEC25584ECE008600D2 /* AppDelegateMock.swift in Sources */,
 				D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */,
