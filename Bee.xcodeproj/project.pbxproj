@@ -18,6 +18,11 @@
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
 		D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */; };
+		D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDB4255849BF008600D2 /* MenuBarHandler.swift */; };
+		D972FDC525584B60008600D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D972FDC725584B60008600D2 /* Localizable.strings */; };
+		D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDCA25584B8F008600D2 /* String+Extensions.swift */; };
+		D972FDD425584C20008600D2 /* MenuBarHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDD325584C20008600D2 /* MenuBarHandlerTests.swift */; };
+		D972FDEC25584ECE008600D2 /* AppDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		D613B3D2254CBA7F00734B49 /* Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bee.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D613B3D5254CBA7F00734B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D613B3D5254CBA7F00734B49 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D613B3D7254CBA7F00734B49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D613B3D9254CBA8600734B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,6 +62,11 @@
 		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
+		D972FDB4255849BF008600D2 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D972FDC625584B60008600D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D972FDCA25584B8F008600D2 /* String+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; tabWidth = 4; };
+		D972FDD325584C20008600D2 /* MenuBarHandlerTests.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandlerTests.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateMock.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,8 @@
 		D613B3D4254CBA7F00734B49 /* Bee */ = {
 			isa = PBXGroup;
 			children = (
+				D972FDC825584B6F008600D2 /* Extensions */,
+				D972FDBF25584AB0008600D2 /* Assets */,
 				D69D6E4F254F716500F1FEB3 /* Models */,
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
@@ -133,7 +145,8 @@
 		D613B3EA254CBA8600734B49 /* BeeTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */,
+				D972FDDC25584C5B008600D2 /* Services */,
+				D972FDD225584BF4008600D2 /* Application */,
 				D613B3ED254CBA8600734B49 /* Info.plist */,
 			);
 			path = BeeTests;
@@ -159,6 +172,7 @@
 		D613B412254CBB9800734B49 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D972FDB325584999008600D2 /* MenuBar */,
 				D613B3D5254CBA7F00734B49 /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -187,6 +201,71 @@
 				D69D6E50254F717200F1FEB3 /* BuildSummary.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D972FDB325584999008600D2 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDB4255849BF008600D2 /* MenuBarHandler.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		D972FDBF25584AB0008600D2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDC725584B60008600D2 /* Localizable.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D972FDC825584B6F008600D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDCA25584B8F008600D2 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D972FDD225584BF4008600D2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDEA25584EBC008600D2 /* Mocks */,
+				D972FDDB25584C23008600D2 /* MenuBar */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D972FDDB25584C23008600D2 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDD325584C20008600D2 /* MenuBarHandlerTests.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		D972FDDC25584C5B008600D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDDD25584C65008600D2 /* BuildParser */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D972FDDD25584C65008600D2 /* BuildParser */ = {
+			isa = PBXGroup;
+			children = (
+				D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */,
+			);
+			path = BuildParser;
+			sourceTree = "<group>";
+		};
+		D972FDEA25584EBC008600D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D972FDC525584B60008600D2 /* Localizable.strings in Resources */,
 				D613B3E0254CBA8600734B49 /* Main.storyboard in Resources */,
 				D613B40D254CBB6200734B49 /* xclogparser in Resources */,
 				D613B3DD254CBA8600734B49 /* Preview Assets.xcassets in Resources */,
@@ -322,6 +402,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D613B408254CBAC200734B49 /* BuildParser.swift in Sources */,
+				D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */,
+				D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */,
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
@@ -333,7 +415,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D972FDEC25584ECE008600D2 /* AppDelegateMock.swift in Sources */,
 				D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */,
+				D972FDD425584C20008600D2 /* MenuBarHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +451,14 @@
 				D613B3DF254CBA8600734B49 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D972FDC725584B60008600D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D972FDC625584B60008600D2 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -496,7 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bee/Info.plist;
@@ -505,7 +597,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -520,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bee/Preview Content\"";
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bee/Info.plist;
@@ -529,7 +621,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee.santiago;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -544,7 +636,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +662,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,7 +685,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -614,7 +706,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bee/BeeTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JM9222EF99;
+				DEVELOPMENT_TEAM = SFVRA5WZ6U;
 				INFOPLIST_FILE = BeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

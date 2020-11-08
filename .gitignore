@@ -1,1 +1,29 @@
-/Bee.xcodeproj/project.xcworkspace/xcuserdata/afterxleep.xcuserdatad/UserInterfaceState.xcuserstate
+# Mac OS X
+.DS_Store
+
+# Xcode
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace

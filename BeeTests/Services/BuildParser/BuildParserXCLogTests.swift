@@ -21,14 +21,6 @@ class BuildParserXCLogTests: XCTestCase {
         return URL(fileURLWithFileSystemRepresentation: pw.pointee.pw_dir, isDirectory: true, relativeTo: nil)
     }
     
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testBuildParserSuccess() throws {
         let parser = LogParserXCLog()
         guard let derivedDataDir = userHomeDirectory()?.path.appending(Constants.derivedDataPath.rawValue) else { return }

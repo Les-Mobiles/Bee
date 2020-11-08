@@ -8,32 +8,23 @@
 import Cocoa
 import SwiftUI
 
+protocol AppDelegatable: NSApplicationDelegate {
+    var window: NSWindow! {get set}
+}
+
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
+class AppDelegate: NSObject, AppDelegatable {
+    
     var window: NSWindow!
-
+    var menuBarConfigurator: MenuBarHandler!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Create the window and set the content view.
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.isReleasedWhenClosed = false
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
+        menuBarConfigurator = MenuBarHandler(appDelegate: self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
+
 
