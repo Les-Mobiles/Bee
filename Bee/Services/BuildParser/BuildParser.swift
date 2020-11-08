@@ -19,15 +19,15 @@ extension LogParserError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .parserNotFound:
-            return NSLocalizedString("The parser executable was not found in the path", comment: "")
+            return "Error.ParserExecutableNotFound".localized
         case .errorDecodingParserData:
-            return NSLocalizedString("An error ocurred while decoding parser output", comment: "")
+            return "Error.DecodingOutput".localized
         case .projectNotFound:
-            return NSLocalizedString("The Xcode project was not found in the provided folder", comment: "")
+            return "Error.XCodeProjectNotFound".localized
         case .invalidFolderSelected:
-            return NSLocalizedString("The LogParsed could not access the provided folder", comment: "")
+            return "Error.LogParserHasNoAccess".localized
         case .generalError:
-            return NSLocalizedString("An unexpected error ocurred", comment: "")
+            return "Error.unknown".localized
         }
     }
 }
