@@ -23,7 +23,6 @@ extension ProjectExplorerError: LocalizedError {
     }
 }
 
-
 protocol ProjectExplorer {
     var fileManager: FileManager! { get set }
     func availableProjects(inPath: String) -> Result<[String], ProjectExplorerError>

@@ -16,12 +16,11 @@
 		D613B408254CBAC200734B49 /* BuildParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B407254CBAC200734B49 /* BuildParser.swift */; };
 		D613B40D254CBB6200734B49 /* xclogparser in Resources */ = {isa = PBXBuildFile; fileRef = D613B40C254CBB6200734B49 /* xclogparser */; };
 		D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B417254CBBF800734B49 /* BuildParserXCLog.swift */; };
-		D672ACF8255847CC00FD6A93 /* FileManager+FolderContentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672ACF7255847CC00FD6A93 /* FileManager+FolderContentsTests.swift */; };
 		D672ACFD2558485F00FD6A93 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672ACFC2558485F00FD6A93 /* TestUtils.swift */; };
+		D672AD112558505D00FD6A93 /* ProjectExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672AD102558505D00FD6A93 /* ProjectExplorerTests.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
 		D6AAC9622552696A00C3E2B9 /* ProjectExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAC9612552696A00C3E2B9 /* ProjectExplorer.swift */; };
 		D6AAC96D25526A4300C3E2B9 /* ProjectExplorerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAC96C25526A4300C3E2B9 /* ProjectExplorerDefault.swift */; };
-		D6AAC97325526E3700C3E2B9 /* FileManager+FolderContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAC97225526E3700C3E2B9 /* FileManager+FolderContents.swift */; };
 		D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,12 +59,11 @@
 		D613B40C254CBB6200734B49 /* xclogparser */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = xclogparser; sourceTree = "<group>"; };
 		D613B417254CBBF800734B49 /* BuildParserXCLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildParserXCLog.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D62DB18E254F9FFC0008870D /* BeeTests.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BeeTests.entitlements; sourceTree = "<group>"; };
-		D672ACF7255847CC00FD6A93 /* FileManager+FolderContentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+FolderContentsTests.swift"; sourceTree = "<group>"; };
 		D672ACFC2558485F00FD6A93 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		D672AD102558505D00FD6A93 /* ProjectExplorerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectExplorerTests.swift; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 		D6AAC9612552696A00C3E2B9 /* ProjectExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorer.swift; sourceTree = "<group>"; };
 		D6AAC96C25526A4300C3E2B9 /* ProjectExplorerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectExplorerDefault.swift; sourceTree = "<group>"; };
-		D6AAC97225526E3700C3E2B9 /* FileManager+FolderContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+FolderContents.swift"; sourceTree = "<group>"; };
 		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +116,6 @@
 		D613B3D4254CBA7F00734B49 /* Bee */ = {
 			isa = PBXGroup;
 			children = (
-				D6AAC97125526E1400C3E2B9 /* Extensions */,
 				D69D6E4F254F716500F1FEB3 /* Models */,
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
@@ -145,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */,
-				D672ACF7255847CC00FD6A93 /* FileManager+FolderContentsTests.swift */,
+				D672AD102558505D00FD6A93 /* ProjectExplorerTests.swift */,
 				D672ACFC2558485F00FD6A93 /* TestUtils.swift */,
 				D613B3ED254CBA8600734B49 /* Info.plist */,
 			);
@@ -210,14 +207,6 @@
 				D6AAC96C25526A4300C3E2B9 /* ProjectExplorerDefault.swift */,
 			);
 			path = ProjectExplorer;
-			sourceTree = "<group>";
-		};
-		D6AAC97125526E1400C3E2B9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D6AAC97225526E3700C3E2B9 /* FileManager+FolderContents.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +346,6 @@
 				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
 				D6AAC9622552696A00C3E2B9 /* ProjectExplorer.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
-				D6AAC97325526E3700C3E2B9 /* FileManager+FolderContents.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
 				D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */,
 			);
@@ -369,7 +357,7 @@
 			files = (
 				D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */,
 				D672ACFD2558485F00FD6A93 /* TestUtils.swift in Sources */,
-				D672ACF8255847CC00FD6A93 /* FileManager+FolderContentsTests.swift in Sources */,
+				D672AD112558505D00FD6A93 /* ProjectExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

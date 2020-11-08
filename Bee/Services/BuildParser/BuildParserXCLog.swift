@@ -13,7 +13,7 @@ enum ShellCmdError: Error {
 
 struct LogParserXCLog {
     
-    private enum Constants: String {
+    private enum StringConstants: String {
         case shell = "/bin/bash"
         case parserExecutable = "xclogparser"
         case simpleReportCommand = "%@ parse --project %@ --reporter summaryJson --derived_data %@"
@@ -29,7 +29,7 @@ struct LogParserXCLog {
         task.standardOutput = outputPipe
         task.standardError = errorPipe
         task.arguments = ["-c", command]
-        task.launchPath = Constants.shell.rawValue
+        task.launchPath = StringConstants.shell.rawValue
         task.launch()
         
         let parsedData = outputPipe.fileHandleForReading.readDataToEndOfFile()
@@ -37,7 +37,7 @@ struct LogParserXCLog {
         
         if !parseError.isEmpty {
             let e = String(data: parseError, encoding: .utf8)
-            if e?.contains(Constants.unrecognizedArgs.rawValue) != nil {
+            if e?.contains(StringConstants.unrecognizedArgs.rawValue) != nil {
                 return .failure(.invalidArguments)
             }
         }
@@ -46,7 +46,7 @@ struct LogParserXCLog {
     
     private func handleXCLogParserError(_ parseError: Data) -> LogParserError {
         let e = String(data: parseError, encoding: .utf8)
-        if e?.contains(Constants.projectNotFound.rawValue) != nil {
+        if e?.contains(StringConstants.projectNotFound.rawValue) != nil {
             return .projectNotFound
         }
         return .generalError
@@ -67,10 +67,10 @@ extension LogParserXCLog: LogParser {
     func parseLogs(forProject project: String,
                    withData derivedData: String) -> Result<BuildSummary?, LogParserError> {
                 
-        guard let parser = Bundle.main.path(forResource: Constants.parserExecutable.rawValue,
+        guard let parser = Bundle.main.path(forResource: StringConstants.parserExecutable.rawValue,
                                             ofType: nil) else { return .failure(.parserNotFound) }
                             
-        let parserResult = shell(String(format: Constants.simpleReportCommand.rawValue, parser, project, derivedData))
+        let parserResult = shell(String(format: StringConstants.simpleReportCommand.rawValue, parser, project, derivedData))
         
         switch parserResult {
             case .success(let data):
