@@ -16,11 +16,6 @@ class BuildParserXCLogTests: XCTestCase {
         case projectName = "Bee"
     }
     
-    private func userHomeDirectory() -> URL? {
-        guard let pw = getpwuid(getuid()) else { return nil }
-        return URL(fileURLWithFileSystemRepresentation: pw.pointee.pw_dir, isDirectory: true, relativeTo: nil)
-    }
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -31,7 +26,7 @@ class BuildParserXCLogTests: XCTestCase {
 
     func testBuildParserSuccess() throws {
         let parser = LogParserXCLog()
-        guard let derivedDataDir = userHomeDirectory()?.path.appending(Constants.derivedDataPath.rawValue) else { return }
+        guard let derivedDataDir = TestUtils.userHomeDirectory()?.path.appending(Constants.derivedDataPath.rawValue) else { return }
         let result = parser.parseLogs(forProject: Constants.projectName.rawValue, withData: derivedDataDir)
         var duration: Float = 0
         switch result {
