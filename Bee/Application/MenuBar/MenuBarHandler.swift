@@ -10,11 +10,11 @@ import SwiftUI
 class MenuBarHandler: NSObject {
 
     var statusItem: NSStatusItem!
-    private weak var appDelegate: AppDelegatable?
+    private let preferencesViewController: PreferencesDisplayable
 
-    init(appDelegate: AppDelegatable) {
+    init(preferencesViewController: PreferencesDisplayable) {
+        self.preferencesViewController = preferencesViewController
         super.init()
-        self.appDelegate = appDelegate
         buildStatusItem()
     }
  }
@@ -36,26 +36,15 @@ private extension MenuBarHandler {
         var action: Selector {
             switch self {
                 case .preferences:
-                    return #selector(presentSettings)
+                    return #selector(presentPreferences)
                 case .quit:
                     return #selector(NSApplication.terminate(_:))
             }
         }
      }
 
-     @objc func presentSettings() {
-         let contentView = ContentView()
-         let window = NSWindow(
-             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-             backing: .buffered, defer: false)
-
-         appDelegate?.window = window
-         appDelegate?.window.isReleasedWhenClosed = false
-         appDelegate?.window.center()
-         appDelegate?.window.setFrameAutosaveName("Main Window")
-         appDelegate?.window.contentView = NSHostingView(rootView: contentView)
-         appDelegate?.window.makeKeyAndOrderFront(nil)
+     @objc func presentPreferences() {
+        preferencesViewController.present()
      }
 
     func buildStatusItem() {

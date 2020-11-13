@@ -6,6 +6,7 @@
 
 */
 
+// Bar StatusItem
 "StatusItem.Menu.Preferences" = "Preferences...";
 "StatusItem.Menu.Quit" = "Quit";
 
@@ -21,4 +22,6 @@
 "Error.XCodeProjectNotFound" = "The Xcode project was not found in the provided folder";
 "Error.LogParserHasNoAccess" = "The LogParsed could not access the provided folder";
 
+// Preferences
+"Preferences.Title" = "Preferences";
 

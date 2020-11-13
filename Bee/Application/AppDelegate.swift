@@ -17,9 +17,20 @@ class AppDelegate: NSObject, AppDelegatable {
     
     var window: NSWindow!
     var menuBarConfigurator: MenuBarHandler!
+    var preferences: PreferencesDisplayable!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        menuBarConfigurator = MenuBarHandler(appDelegate: self)
+        window = NSWindow(
+                     contentRect: NSRect(x: 0, y: 0, width: 400, height: 300),
+                     styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                     backing: .buffered, defer: false)
+        window.isReleasedWhenClosed = false
+        window.center()
+        window.title = "Preferences"
+        window.setFrameAutosaveName("Main Window")
+        preferences = PreferencesViewController(window: window)
+        preferences.presentOnStartupIfNeeded()
+        menuBarConfigurator = MenuBarHandler(preferencesViewController: preferences)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

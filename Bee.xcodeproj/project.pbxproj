@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3D5254CBA7F00734B49 /* AppDelegate.swift */; };
-		D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3D7254CBA7F00734B49 /* ContentView.swift */; };
+		D613B3D8254CBA7F00734B49 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613B3D7254CBA7F00734B49 /* PreferencesView.swift */; };
 		D613B3DA254CBA8600734B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3D9254CBA8600734B49 /* Assets.xcassets */; };
 		D613B3DD254CBA8600734B49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */; };
 		D613B3E0254CBA8600734B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D613B3DE254CBA8600734B49 /* Main.storyboard */; };
@@ -23,6 +23,15 @@
 		D64DDB1C25588A42003A7DDE /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DDB1B25588A42003A7DDE /* TestUtils.swift */; };
 		D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D6E50254F717200F1FEB3 /* BuildSummary.swift */; };
 		D6BCFD5825511F550060A39F /* BuildParserXCLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */; };
+		D93CC99A255CE2FA00B55E6D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CC999255CE2FA00B55E6D /* PreferencesViewController.swift */; };
+		D93CC9AC255CF19500B55E6D /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = D93CC9AB255CF19500B55E6D /* Defaults */; };
+		D93CC9B2255CF80000B55E6D /* DefaultsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CC9B1255CF80000B55E6D /* DefaultsAdapter.swift */; };
+		D9498B64255E4EFD0091870F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9498B63255E4EFD0091870F /* AppDelegate.swift */; };
+		D9498B68255E4EFF0091870F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9498B67255E4EFF0091870F /* Assets.xcassets */; };
+		D9498B6B255E4EFF0091870F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9498B6A255E4EFF0091870F /* Preview Assets.xcassets */; };
+		D9498B6E255E4EFF0091870F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9498B6C255E4EFF0091870F /* Main.storyboard */; };
+		D9498B81255E50330091870F /* BeeLauncher.app in Copy Launcher */ = {isa = PBXBuildFile; fileRef = D9498B61255E4EFD0091870F /* BeeLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9498B88255E505F0091870F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9498B87255E505F0091870F /* ServiceManagement.framework */; };
 		D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDB4255849BF008600D2 /* MenuBarHandler.swift */; };
 		D972FDC525584B60008600D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D972FDC725584B60008600D2 /* Localizable.strings */; };
 		D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDCA25584B8F008600D2 /* String+Extensions.swift */; };
@@ -47,10 +56,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D9498B80255E50090091870F /* Copy Launcher */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItem;
+			dstSubfolderSpec = 1;
+			files = (
+				D9498B81255E50330091870F /* BeeLauncher.app in Copy Launcher */,
+			);
+			name = "Copy Launcher";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D613B3D2254CBA7F00734B49 /* Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D613B3D5254CBA7F00734B49 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
-		D613B3D7254CBA7F00734B49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D613B3D7254CBA7F00734B49 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		D613B3D9254CBA8600734B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D613B3DC254CBA8600734B49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D613B3DF254CBA8600734B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +95,16 @@
 		D64DDB1B25588A42003A7DDE /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		D69D6E50254F717200F1FEB3 /* BuildSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSummary.swift; sourceTree = "<group>"; };
 		D6BCFD5725511F550060A39F /* BuildParserXCLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParserXCLogTests.swift; sourceTree = "<group>"; };
+		D93CC999255CE2FA00B55E6D /* PreferencesViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D93CC9B1255CF80000B55E6D /* DefaultsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsAdapter.swift; sourceTree = "<group>"; };
+		D9498B61255E4EFD0091870F /* BeeLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9498B63255E4EFD0091870F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9498B67255E4EFF0091870F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9498B6A255E4EFF0091870F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9498B6D255E4EFF0091870F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9498B6F255E4EFF0091870F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9498B70255E4EFF0091870F /* BeeLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeeLauncher.entitlements; sourceTree = "<group>"; };
+		D9498B87255E505F0091870F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		D972FDB4255849BF008600D2 /* MenuBarHandler.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandler.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D972FDC625584B60008600D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D972FDCA25584B8F008600D2 /* String+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; tabWidth = 4; };
@@ -84,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93CC9AC255CF19500B55E6D /* Defaults in Frameworks */,
+				D9498B88255E505F0091870F /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9498B5E255E4EFD0091870F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,10 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				D613B3D4254CBA7F00734B49 /* Bee */,
+				D9498B62255E4EFD0091870F /* BeeLauncher */,
 				D613B411254CBB6A00734B49 /* Utils */,
 				D613B3EA254CBA8600734B49 /* BeeTests */,
 				D613B3F5254CBA8700734B49 /* BeeUITests */,
 				D613B3D3254CBA7F00734B49 /* Products */,
+				D9498B86255E505F0091870F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +165,7 @@
 				D613B3D2254CBA7F00734B49 /* Bee.app */,
 				D613B3E7254CBA8600734B49 /* BeeTests.xctest */,
 				D613B3F2254CBA8700734B49 /* BeeUITests.xctest */,
+				D9498B61255E4EFD0091870F /* BeeLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,12 +173,12 @@
 		D613B3D4254CBA7F00734B49 /* Bee */ = {
 			isa = PBXGroup;
 			children = (
+				D93CC9B0255CF7DB00B55E6D /* Third Party */,
 				D972FDC825584B6F008600D2 /* Extensions */,
 				D972FDBF25584AB0008600D2 /* Assets */,
 				D69D6E4F254F716500F1FEB3 /* Models */,
 				D613B414254CBBBE00734B49 /* Services */,
 				D613B412254CBB9800734B49 /* Application */,
-				D613B3D7254CBA7F00734B49 /* ContentView.swift */,
 				D613B3D9254CBA8600734B49 /* Assets.xcassets */,
 				D613B3DE254CBA8600734B49 /* Main.storyboard */,
 				D613B3E1254CBA8600734B49 /* Info.plist */,
@@ -182,6 +227,7 @@
 		D613B412254CBB9800734B49 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D93CC998255CE2DF00B55E6D /* Preferences */,
 				D972FDB325584999008600D2 /* MenuBar */,
 				D613B3D5254CBA7F00734B49 /* AppDelegate.swift */,
 			);
@@ -229,6 +275,52 @@
 				D69D6E50254F717200F1FEB3 /* BuildSummary.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D93CC998255CE2DF00B55E6D /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				D613B3D7254CBA7F00734B49 /* PreferencesView.swift */,
+				D93CC999255CE2FA00B55E6D /* PreferencesViewController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		D93CC9B0255CF7DB00B55E6D /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				D93CC9B1255CF80000B55E6D /* DefaultsAdapter.swift */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		D9498B62255E4EFD0091870F /* BeeLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				D9498B63255E4EFD0091870F /* AppDelegate.swift */,
+				D9498B67255E4EFF0091870F /* Assets.xcassets */,
+				D9498B6C255E4EFF0091870F /* Main.storyboard */,
+				D9498B6F255E4EFF0091870F /* Info.plist */,
+				D9498B70255E4EFF0091870F /* BeeLauncher.entitlements */,
+				D9498B69255E4EFF0091870F /* Preview Content */,
+			);
+			path = BeeLauncher;
+			sourceTree = "<group>";
+		};
+		D9498B69255E4EFF0091870F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9498B6A255E4EFF0091870F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D9498B86255E505F0091870F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9498B87255E505F0091870F /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D972FDB325584999008600D2 /* MenuBar */ = {
@@ -309,12 +401,16 @@
 				D613B3CE254CBA7F00734B49 /* Sources */,
 				D613B3CF254CBA7F00734B49 /* Frameworks */,
 				D613B3D0254CBA7F00734B49 /* Resources */,
+				D9498B80255E50090091870F /* Copy Launcher */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Bee;
+			packageProductDependencies = (
+				D93CC9AB255CF19500B55E6D /* Defaults */,
+			);
 			productName = Bee;
 			productReference = D613B3D2254CBA7F00734B49 /* Bee.app */;
 			productType = "com.apple.product-type.application";
@@ -355,13 +451,30 @@
 			productReference = D613B3F2254CBA8700734B49 /* BeeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D9498B60255E4EFD0091870F /* BeeLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9498B71255E4EFF0091870F /* Build configuration list for PBXNativeTarget "BeeLauncher" */;
+			buildPhases = (
+				D9498B5D255E4EFD0091870F /* Sources */,
+				D9498B5E255E4EFD0091870F /* Frameworks */,
+				D9498B5F255E4EFD0091870F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeeLauncher;
+			productName = BeeLauncher;
+			productReference = D9498B61255E4EFD0091870F /* BeeLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D613B3CA254CBA7F00734B49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					D613B3D1254CBA7F00734B49 = {
@@ -376,6 +489,9 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = D613B3D1254CBA7F00734B49;
 					};
+					D9498B60255E4EFD0091870F = {
+						CreatedOnToolsVersion = 12.1;
+					};
 				};
 			};
 			buildConfigurationList = D613B3CD254CBA7F00734B49 /* Build configuration list for PBXProject "Bee" */;
@@ -387,11 +503,15 @@
 				Base,
 			);
 			mainGroup = D613B3C9254CBA7F00734B49;
+			packageReferences = (
+				D93CC9AA255CF19500B55E6D /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = D613B3D3254CBA7F00734B49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D613B3D1254CBA7F00734B49 /* Bee */,
+				D9498B60255E4EFD0091870F /* BeeLauncher */,
 				D613B3E6254CBA8600734B49 /* BeeTests */,
 				D613B3F1254CBA8700734B49 /* BeeUITests */,
 			);
@@ -425,6 +545,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9498B5F255E4EFD0091870F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9498B6E255E4EFF0091870F /* Main.storyboard in Resources */,
+				D9498B6B255E4EFF0091870F /* Preview Assets.xcassets in Resources */,
+				D9498B68255E4EFF0091870F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -437,10 +567,12 @@
 				D613B408254CBAC200734B49 /* BuildParser.swift in Sources */,
 				D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */,
 				D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */,
-				D613B3D8254CBA7F00734B49 /* ContentView.swift in Sources */,
+				D613B3D8254CBA7F00734B49 /* PreferencesView.swift in Sources */,
 				D613B3D6254CBA7F00734B49 /* AppDelegate.swift in Sources */,
 				D613B418254CBBF800734B49 /* BuildParserXCLog.swift in Sources */,
+				D93CC9B2255CF80000B55E6D /* DefaultsAdapter.swift in Sources */,
 				D69D6E51254F717200F1FEB3 /* BuildSummary.swift in Sources */,
+				D93CC99A255CE2FA00B55E6D /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +597,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9498B5D255E4EFD0091870F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9498B64255E4EFD0091870F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -485,6 +625,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				D613B3DF254CBA8600734B49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D9498B6C255E4EFF0091870F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9498B6D255E4EFF0091870F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -633,6 +781,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					Combine,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -657,6 +809,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					Combine,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.Bee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -756,6 +912,56 @@
 			};
 			name = Release;
 		};
+		D9498B72255E4EFF0091870F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeeLauncher/BeeLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BeeLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = JM9222EF99;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BeeLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D9498B73255E4EFF0091870F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeeLauncher/BeeLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BeeLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = JM9222EF99;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BeeLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -795,7 +1001,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D9498B71255E4EFF0091870F /* Build configuration list for PBXNativeTarget "BeeLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9498B72255E4EFF0091870F /* Debug */,
+				D9498B73255E4EFF0091870F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D93CC9AA255CF19500B55E6D /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D93CC9AB255CF19500B55E6D /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D93CC9AA255CF19500B55E6D /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D613B3CA254CBA7F00734B49 /* Project object */;
 }
