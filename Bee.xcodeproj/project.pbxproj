@@ -29,7 +29,6 @@
 		D9498B64255E4EFD0091870F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9498B63255E4EFD0091870F /* AppDelegate.swift */; };
 		D9498B68255E4EFF0091870F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9498B67255E4EFF0091870F /* Assets.xcassets */; };
 		D9498B6B255E4EFF0091870F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9498B6A255E4EFF0091870F /* Preview Assets.xcassets */; };
-		D9498B6E255E4EFF0091870F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9498B6C255E4EFF0091870F /* Main.storyboard */; };
 		D9498B81255E50330091870F /* BeeLauncher.app in Copy Launcher */ = {isa = PBXBuildFile; fileRef = D9498B61255E4EFD0091870F /* BeeLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D9498B88255E505F0091870F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9498B87255E505F0091870F /* ServiceManagement.framework */; };
 		D972FDB5255849BF008600D2 /* MenuBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDB4255849BF008600D2 /* MenuBarHandler.swift */; };
@@ -101,7 +100,6 @@
 		D9498B63255E4EFD0091870F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9498B67255E4EFF0091870F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9498B6A255E4EFF0091870F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D9498B6D255E4EFF0091870F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9498B6F255E4EFF0091870F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9498B70255E4EFF0091870F /* BeeLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeeLauncher.entitlements; sourceTree = "<group>"; };
 		D9498B87255E505F0091870F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
@@ -299,7 +297,6 @@
 			children = (
 				D9498B63255E4EFD0091870F /* AppDelegate.swift */,
 				D9498B67255E4EFF0091870F /* Assets.xcassets */,
-				D9498B6C255E4EFF0091870F /* Main.storyboard */,
 				D9498B6F255E4EFF0091870F /* Info.plist */,
 				D9498B70255E4EFF0091870F /* BeeLauncher.entitlements */,
 				D9498B69255E4EFF0091870F /* Preview Content */,
@@ -549,7 +546,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9498B6E255E4EFF0091870F /* Main.storyboard in Resources */,
 				D9498B6B255E4EFF0091870F /* Preview Assets.xcassets in Resources */,
 				D9498B68255E4EFF0091870F /* Assets.xcassets in Resources */,
 			);
@@ -625,14 +621,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D613B3DF254CBA8600734B49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D9498B6C255E4EFF0091870F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9498B6D255E4EFF0091870F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 
 import Cocoa
 import SwiftUI
+import ServiceManagement
+
 
 protocol AppDelegatable: NSApplicationDelegate {
     var window: NSWindow! {get set}
@@ -31,6 +33,13 @@ class AppDelegate: NSObject, AppDelegatable {
         preferences = PreferencesViewController(window: window)
         preferences.presentOnStartupIfNeeded()
         menuBarConfigurator = MenuBarHandler(preferencesViewController: preferences)
+        let launcherAppId = "com.banshai.BeeLauncher"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -39,3 +48,6 @@ class AppDelegate: NSObject, AppDelegatable {
 }
 
 
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
+}
