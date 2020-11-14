@@ -24,4 +24,6 @@
 
 // Preferences
 "Preferences.Title" = "Preferences";
-
+"Preferences.DerivedData" = "Derived Data";
+"Preferences.ServerURL" = "Server URL";
+"Preferences.LaunchAtLogin" = "Launch at login";

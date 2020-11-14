@@ -22,9 +22,16 @@ class AppDelegate: NSObject, AppDelegatable {
     var preferences: PreferencesDisplayable!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let launcherAppId = "com.banshai.BeeLauncher"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+        if isRunning {
+            DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
+        }
         window = NSWindow(
                      contentRect: NSRect(x: 0, y: 0, width: 400, height: 300),
-                     styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                     styleMask: [.titled, .closable, .miniaturizable],
                      backing: .buffered, defer: false)
         window.isReleasedWhenClosed = false
         window.center()
@@ -33,13 +40,6 @@ class AppDelegate: NSObject, AppDelegatable {
         preferences = PreferencesViewController(window: window)
         preferences.presentOnStartupIfNeeded()
         menuBarConfigurator = MenuBarHandler(preferencesViewController: preferences)
-        let launcherAppId = "com.banshai.BeeLauncher"
-        let runningApps = NSWorkspace.shared.runningApplications
-        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
-        SMLoginItemSetEnabled(launcherAppId as CFString, true)
-        if isRunning {
-            DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
-        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

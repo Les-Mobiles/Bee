@@ -18,14 +18,12 @@ class PreferencesViewController {
     private weak var window: NSWindow?
     private(set) var view: PreferencesView
     
-    init(window: NSWindow,
+    init(window: NSWindow?,
          view: PreferencesView = .init()) {
         self.window = window
         self.view = view
-        window.contentView = NSHostingView(rootView: view)
+        window?.contentView = NSHostingView(rootView: view)
     }
-    
-    
 }
 
 extension PreferencesViewController: PreferencesDisplayable {
