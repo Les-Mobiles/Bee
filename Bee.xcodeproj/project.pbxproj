@@ -32,6 +32,11 @@
 		D972FDCB25584B8F008600D2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDCA25584B8F008600D2 /* String+Extensions.swift */; };
 		D972FDD425584C20008600D2 /* MenuBarHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDD325584C20008600D2 /* MenuBarHandlerTests.swift */; };
 		D972FDEC25584ECE008600D2 /* AppDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */; };
+		D9B72EE3256080F9001324FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B72EE2256080F9001324FF /* AppDelegate.swift */; };
+		D9B72EE5256080F9001324FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B72EE4256080F9001324FF /* ContentView.swift */; };
+		D9B72EE7256080FB001324FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B72EE6256080FB001324FF /* Assets.xcassets */; };
+		D9B72EEA256080FB001324FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B72EE9256080FB001324FF /* Preview Assets.xcassets */; };
+		D9B72EED256080FB001324FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B72EEB256080FB001324FF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,14 @@
 		D972FDCA25584B8F008600D2 /* String+Extensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; tabWidth = 4; };
 		D972FDD325584C20008600D2 /* MenuBarHandlerTests.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MenuBarHandlerTests.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D972FDEB25584ECE008600D2 /* AppDelegateMock.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateMock.swift; sourceTree = "<group>"; tabWidth = 4; };
+		D9B72EE0256080F9001324FF /* BeeLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B72EE2256080F9001324FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9B72EE4256080F9001324FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9B72EE6256080FB001324FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9B72EE9256080FB001324FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9B72EEC256080FB001324FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9B72EEE256080FB001324FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B72EEF256080FB001324FF /* BeeLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeeLauncher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9B72EDD256080F9001324FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,6 +153,7 @@
 				D613B411254CBB6A00734B49 /* Utils */,
 				D613B3EA254CBA8600734B49 /* BeeTests */,
 				D613B3F5254CBA8700734B49 /* BeeUITests */,
+				D9B72EE1256080F9001324FF /* BeeLauncher */,
 				D613B3D3254CBA7F00734B49 /* Products */,
 				D9498B86255E505F0091870F /* Frameworks */,
 			);
@@ -144,6 +165,7 @@
 				D613B3D2254CBA7F00734B49 /* Bee.app */,
 				D613B3E7254CBA8600734B49 /* BeeTests.xctest */,
 				D613B3F2254CBA8700734B49 /* BeeUITests.xctest */,
+				D9B72EE0256080F9001324FF /* BeeLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,6 +370,28 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D9B72EE1256080F9001324FF /* BeeLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				D9B72EE2256080F9001324FF /* AppDelegate.swift */,
+				D9B72EE4256080F9001324FF /* ContentView.swift */,
+				D9B72EE6256080FB001324FF /* Assets.xcassets */,
+				D9B72EEB256080FB001324FF /* Main.storyboard */,
+				D9B72EEE256080FB001324FF /* Info.plist */,
+				D9B72EEF256080FB001324FF /* BeeLauncher.entitlements */,
+				D9B72EE8256080FB001324FF /* Preview Content */,
+			);
+			path = BeeLauncher;
+			sourceTree = "<group>";
+		};
+		D9B72EE8256080FB001324FF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9B72EE9256080FB001324FF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,13 +452,30 @@
 			productReference = D613B3F2254CBA8700734B49 /* BeeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D9B72EDF256080F9001324FF /* BeeLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B72EF0256080FB001324FF /* Build configuration list for PBXNativeTarget "BeeLauncher" */;
+			buildPhases = (
+				D9B72EDC256080F9001324FF /* Sources */,
+				D9B72EDD256080F9001324FF /* Frameworks */,
+				D9B72EDE256080F9001324FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeeLauncher;
+			productName = BeeLauncher;
+			productReference = D9B72EE0256080F9001324FF /* BeeLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D613B3CA254CBA7F00734B49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					D613B3D1254CBA7F00734B49 = {
@@ -428,6 +489,9 @@
 					D613B3F1254CBA8700734B49 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = D613B3D1254CBA7F00734B49;
+					};
+					D9B72EDF256080F9001324FF = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -450,6 +514,7 @@
 				D613B3D1254CBA7F00734B49 /* Bee */,
 				D613B3E6254CBA8600734B49 /* BeeTests */,
 				D613B3F1254CBA8700734B49 /* BeeUITests */,
+				D9B72EDF256080F9001324FF /* BeeLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -478,6 +543,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B72EDE256080F9001324FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B72EED256080FB001324FF /* Main.storyboard in Resources */,
+				D9B72EEA256080FB001324FF /* Preview Assets.xcassets in Resources */,
+				D9B72EE7256080FB001324FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +598,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D9B72EDC256080F9001324FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B72EE5256080F9001324FF /* ContentView.swift in Sources */,
+				D9B72EE3256080F9001324FF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -553,6 +637,14 @@
 				D972FDC625584B60008600D2 /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D9B72EEB256080FB001324FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B72EEC256080FB001324FF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -822,6 +914,56 @@
 			};
 			name = Release;
 		};
+		D9B72EF1256080FB001324FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeeLauncher/BeeLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BeeLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = JM9222EF99;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BeeLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D9B72EF2256080FB001324FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeeLauncher/BeeLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BeeLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = JM9222EF99;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BeeLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banshai.BeeLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -857,6 +999,15 @@
 			buildConfigurations = (
 				D613B402254CBA8700734B49 /* Debug */,
 				D613B403254CBA8700734B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B72EF0256080FB001324FF /* Build configuration list for PBXNativeTarget "BeeLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B72EF1256080FB001324FF /* Debug */,
+				D9B72EF2256080FB001324FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
