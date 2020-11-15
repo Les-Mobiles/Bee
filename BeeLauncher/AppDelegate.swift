@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let runningApps = NSWorkspace.shared.runningApplications
         let beeIsRunning = !runningApps.filter { $0.bundleIdentifier == mainAppId }.isEmpty
         
-        if beeIsRunning {
+        if !beeIsRunning {
             DistributedNotificationCenter.default().addObserver(self, selector: #selector(terminate), name: .killLauncher, object: mainAppId)
             let path = Bundle.main.bundlePath as NSString
             
