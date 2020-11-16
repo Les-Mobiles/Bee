@@ -20,17 +20,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if !beeIsRunning {
             DistributedNotificationCenter.default().addObserver(self, selector: #selector(terminate), name: .killLauncher, object: mainAppId)
-            let path = Bundle.main.bundlePath as NSString
-            
-            var components = path.pathComponents
-            components.removeLast()
-            components.removeLast()
-            components.removeLast()
-            components.append("MacOS")
-            components.append("Bee")
+            guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: mainAppId) else { return }
 
-            let newPath = NSString.path(withComponents: components)
-            NSWorkspace.shared.launchApplication(newPath)
+            NSWorkspace.shared.openApplication(at: url, configuration: NSWorkspace.OpenConfiguration(), completionHandler: nil)
         } else {
             terminate()
         }
