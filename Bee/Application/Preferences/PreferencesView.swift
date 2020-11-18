@@ -9,26 +9,27 @@ import SwiftUI
 
 struct PreferencesView: View {
     
-    @State private var serverURL = String()
-    @State private var lauchAtLogin = false
-    @State private var derivedDataPath = String()
-        
+    @ObservedObject private(set) var viewModel: PreferencesViewModel
+    weak var controller: PreferencesDisplayable?
+    
     var body: some View {
         VStack(alignment: .leading, spacing: Constants.twenty.rawValue) {
             HStack {
                 Text("Preferences.ServerURL")
-                TextField("Preferences.ServerURL", text: $serverURL)
-                
+                TextField("Preferences.ServerURL", text: $viewModel.serverURL)
             }
             HStack {
-                Picker("Preferences.DerivedData", selection: $derivedDataPath) {
-                    ForEach(DerivedDataPathOptions.allCases) {
-                        Text($0.rawValue)
-                    }
+                Picker("Preferences.DerivedData", selection: $viewModel.derivedDataPath) {
+                    ForEach(DerivedDataPathOptions.allCases) { Text($0.rawValue) }
                 }
+                .onReceive([viewModel.derivedDataPath].publisher.first(), perform: { path in
+                    controller?.openFinder(atPath: path)
+                })
+                .frame(width: 180, height: 20)
+                .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: false)
             }
             HStack {
-                Toggle("Preferences.LaunchAtLogin", isOn: $lauchAtLogin)
+                Toggle("Preferences.LaunchAtLogin", isOn: $viewModel.lauchAtLogin)
             }
         }.padding(Constants.defaultPadding)
     }
@@ -46,17 +47,10 @@ private extension PreferencesView {
             trailing: Constants.twenty.rawValue
         )
     }
-    
-    enum DerivedDataPathOptions: String, CaseIterable, Identifiable {
-        case `default` = "Default"
-        case custom = "Custom"
-        
-        var id: String { rawValue }
-    }
 }
 
 struct PreferencesView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferencesView()
+        PreferencesView(viewModel: PreferencesViewModel())
     }
 }

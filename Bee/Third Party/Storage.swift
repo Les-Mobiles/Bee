@@ -1,5 +1,5 @@
 //
-//  DefaultsAdapter.swift
+//  Storage.swift
 //  Bee
 //
 //  Created by Santiago Avila Arroyave on 11/11/20.
@@ -8,16 +8,16 @@
 import Foundation
 import Defaults
 
-protocol DefaultsAdapterProtocol {
-    static var firstLauch: Bool {get set}
-    static var launchAtLogin: Bool {get set}
-    static var derivedDataPath: String {get set}
-    static var serverURL: String {get set}
+protocol Storage {
+    var firstLauch: Bool {get set}
+    var launchAtLogin: Bool {get set}
+    var derivedDataPath: String {get set}
+    var serverURL: String {get set}
 }
 
-struct DefaultsAdapter: DefaultsAdapterProtocol {
+struct StorageDefault: Storage {
     
-    static var firstLauch: Bool {
+    var firstLauch: Bool {
         get {
             Defaults[.firstLaunch]
         }
@@ -26,7 +26,7 @@ struct DefaultsAdapter: DefaultsAdapterProtocol {
         }
     }
     
-    static var launchAtLogin: Bool {
+    var launchAtLogin: Bool {
         get {
             Defaults[.launchAtLogin]
         }
@@ -35,7 +35,7 @@ struct DefaultsAdapter: DefaultsAdapterProtocol {
         }
     }
     
-    static var derivedDataPath: String {
+    var derivedDataPath: String {
         get {
             Defaults[.derivedDataPath]
         }
@@ -44,7 +44,7 @@ struct DefaultsAdapter: DefaultsAdapterProtocol {
         }
     }
     
-    static var serverURL: String {
+    var serverURL: String {
         get {
             Defaults[.serverURL]
         }

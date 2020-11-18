@@ -38,7 +38,7 @@ class AppDelegate: NSObject, AppDelegatable {
         window.title = "Preferences"
         window.setFrameAutosaveName("Main Window")
         preferences = PreferencesViewController(window: window)
-        preferences.presentOnStartupIfNeeded()
+        preferences.present()
         menuBarConfigurator = MenuBarHandler(preferencesViewController: preferences)
     }
 }
